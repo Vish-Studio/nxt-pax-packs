@@ -23,15 +23,27 @@ export function ProductsSection({ products, activeProduct, onSelectProduct }: Pr
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <Reveal className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
-            <p className="text-green-500 text-xs font-bold uppercase tracking-widest mb-3">What we carry</p>
+            <p className="text-green-500 text-xs font-bold uppercase tracking-widest mb-3">What you can buy</p>
             <h2 className="text-4xl md:text-5xl font-extrabold text-green-950 leading-tight">
-              Every format.<br />
-              Zero compromise.
+              Replace plastic SKUs<br />
+              with bio alternatives.
             </h2>
           </div>
           <p className="text-green-700/60 max-w-xs text-sm leading-relaxed">
-            From checkout bags to food containers — 100% bio-based, certified compostable, ready at volume.
+            Choose the product family you need, then call us for sizing, material, lead time, and volume pricing.
           </p>
+        </Reveal>
+
+        <Reveal className="mb-8 grid gap-3 md:grid-cols-3" delay={0.06}>
+          {[
+            'Bulk carton supply for stores and food teams',
+            'Bio materials suited to daily customer use',
+            'Fast product matching before you order',
+          ].map((item) => (
+            <div key={item} className="border-t border-green-100 pt-4 text-sm font-semibold text-green-800">
+              {item}
+            </div>
+          ))}
         </Reveal>
 
         <div className="grid lg:grid-cols-5 gap-8">
@@ -75,8 +87,8 @@ export function ProductsSection({ products, activeProduct, onSelectProduct }: Pr
             <div className="rounded-3xl bg-green-50 border border-green-100 p-6 flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-xl flex-shrink-0">✓</div>
               <div>
-                <div className="font-bold text-green-900 text-sm">Certified Compostable</div>
-                <div className="text-green-600/60 text-xs mt-0.5">EN 13432 · ASTM D6400 · OK Compost</div>
+                <div className="font-bold text-green-900 text-sm">Need a matching SKU?</div>
+                <div className="text-green-600/60 text-xs mt-0.5">Tell us your size, use case, and monthly volume.</div>
               </div>
             </div>
           </Reveal>

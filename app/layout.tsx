@@ -8,8 +8,48 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'PaxPacks',
-  description: 'Certified biodegradable packaging for modern businesses.',
+  metadataBase: new URL('https://paxpacks.github.io'),
+  title: {
+    default: 'PaxPacks | Bio Packaging Products for Businesses',
+    template: '%s | PaxPacks',
+  },
+  description: 'PaxPacks supplies biodegradable bags, cups, mailers, and takeaway containers for businesses replacing everyday plastic packaging.',
+  keywords: [
+    'biodegradable packaging',
+    'bio packaging supplier',
+    'compostable bags',
+    'eco cups',
+    'takeaway containers',
+    'mailer packaging',
+    'food packaging supplier',
+  ],
+  applicationName: 'PaxPacks',
+  authors: [{ name: 'PaxPacks' }],
+  creator: 'PaxPacks',
+  publisher: 'PaxPacks',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  manifest: '/site.webmanifest',
+  openGraph: {
+    title: 'PaxPacks | Bio Packaging Products for Businesses',
+    description: 'Biodegradable bags, cups, mailers, and takeaway containers for retail, food service, ecommerce, and delivery teams.',
+    url: 'https://paxpacks.github.io',
+    siteName: 'PaxPacks',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'PaxPacks | Bio Packaging Products for Businesses',
+    description: 'Biodegradable bags, cups, mailers, and takeaway containers for businesses replacing everyday plastic packaging.',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

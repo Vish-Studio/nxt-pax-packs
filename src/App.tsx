@@ -30,7 +30,7 @@ const PRODUCTS = [
   {
     name: 'Bio Carry Bags',
     tag: 'Plant Starch',
-    desc: 'Made from plant starch — fully compostable within 180 days in standard soil conditions.',
+    desc: 'Retail and grocery carry bags that feel familiar to customers while replacing conventional single-use plastic.',
     img: 'https://unsplash.com/photos/white-plastic-bag-on-white-table-NcAJ6N_Kn8E/download?force=true',
     stat: '180 days',
     statLabel: 'to biodegrade',
@@ -38,7 +38,7 @@ const PRODUCTS = [
   {
     name: 'Eco Cups & Lids',
     tag: 'PLA-lined',
-    desc: 'Hot and cold beverage cups that vanish in commercial composting facilities, leaving nothing behind.',
+    desc: 'Hot and cold drink cups with matching lids for cafes, food courts, events, and beverage counters.',
     img: 'https://images.unsplash.com/photo-1761210980705-9f901d4182f7?w=700&h=800&fit=crop&auto=format',
     stat: '100%',
     statLabel: 'plant-based',
@@ -46,7 +46,7 @@ const PRODUCTS = [
   {
     name: 'Mailer Packaging',
     tag: 'Cassava Based',
-    desc: 'Moisture-resistant mailers from cassava and sugarcane fibre — durable in transit, gone after use.',
+    desc: 'Lightweight mailers and shipping sleeves for ecommerce brands replacing plastic poly mailers.',
     img: 'https://unsplash.com/photos/W-CN4ZWwKiY/download?force=true',
     stat: '100%',
     statLabel: 'compostable',
@@ -54,7 +54,7 @@ const PRODUCTS = [
   {
     name: 'Food Containers',
     tag: 'Bagasse',
-    desc: 'Sugarcane pulp containers — microwave safe, grease resistant, biodegrades in 60 days.',
+    desc: 'Takeaway boxes, clamshells, bowls, and trays for restaurants, caterers, cloud kitchens, and delivery teams.',
     img: 'https://unsplash.com/photos/pxz1DfpNEs0/download?force=true',
     stat: '60 days',
     statLabel: 'full breakdown',
@@ -62,27 +62,27 @@ const PRODUCTS = [
 ]
 
 const STATS = [
-  { value: '2.4M+', label: 'Units shipped annually' },
-  { value: '180', label: 'Days avg. biodegradation' },
+  { value: '2.4M+', label: 'Packaging units supplied annually' },
+  { value: '4', label: 'Core product categories ready to source' },
   { value: '98%', label: 'Client reorder rate' },
-  { value: '100%', label: 'Bio-based materials, always' },
+  { value: '100%', label: 'Bio-based product focus' },
 ]
 
 const TESTIMONIALS = [
   {
-    quote: "Switching to PaxPacks cut our packaging footprint by 94%. Our customers noticed immediately — it became part of our brand story.",
+    quote: "PaxPacks helped us replace plastic carry bags and takeaway boxes without changing our counter workflow. The product matching was quick.",
     author: 'Priya Menon',
     role: 'Head of Operations, FreshMart',
     avatar: 'PM',
   },
   {
-    quote: "The drop-in compatibility is real. We swapped 12 SKUs in a single weekend. Zero disruption, full certification coverage.",
+    quote: "We needed cups, lids, and food containers that our staff could use immediately. PaxPacks gave us practical options instead of vague eco claims.",
     author: 'Daniel Osei',
     role: 'Supply Chain Director, CloudKitchens SG',
     avatar: 'DO',
   },
   {
-    quote: "PaxPacks gives us the volume pricing we need and the third-party certifications our retail partners demand. Easy decision.",
+    quote: "The reorder process is simple. We call with monthly volume, confirm the SKUs, and keep packaging stocked for our retail locations.",
     author: 'Rachel Ng',
     role: 'Procurement Lead, GreenMart Group',
     avatar: 'RN',

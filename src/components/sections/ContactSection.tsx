@@ -1,4 +1,5 @@
 import { Reveal } from '../reveal/Reveal'
+import { ParallaxImage } from '../parallax/ParallaxImage'
 
 interface ContactSectionProps {
   leavesImage: string
@@ -8,13 +9,19 @@ export function ContactSection({ leavesImage }: ContactSectionProps) {
   return (
     <section id="contact" className="py-28 bg-green-950 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        <img src={leavesImage} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        <ParallaxImage
+          src={leavesImage}
+          alt=""
+          ariaHidden
+          className="absolute inset-0 overflow-hidden"
+          speed={46}
+        />
       </div>
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
         <Reveal>
-          <p className="text-green-400 text-xs font-bold uppercase tracking-widest mb-4">Get in touch</p>
+          <p className="text-green-400 text-xs font-bold uppercase tracking-widest mb-4">Get pricing</p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-            Ready to make<br />the switch?
+            Tell us what you use now.<br />We will match the bio option.
           </h2>
           <p className="text-green-300/70 leading-relaxed mb-10">
             Speak with our packaging team about volume tiers, delivery schedules, product formats, and certification documentation.
@@ -37,12 +44,12 @@ export function ContactSection({ leavesImage }: ContactSectionProps) {
         </Reveal>
 
         <Reveal className="rounded-3xl border border-green-800 bg-white p-8 shadow-2xl shadow-green-950/30 lg:p-10" delay={0.12}>
-          <p className="mb-4 text-xs font-bold uppercase tracking-widest text-green-500">Talk to sales</p>
+          <p className="mb-4 text-xs font-bold uppercase tracking-widest text-green-500">Fastest next step</p>
           <h3 className="mb-4 text-3xl font-extrabold leading-tight text-green-950">
-            Call PaxPacks for product pricing and availability.
+            Call for product matching, pricing, and availability.
           </h3>
           <p className="mb-8 text-sm leading-7 text-green-700/70">
-            Get quick guidance on the right biodegradable packaging formats for your order size, timeline, and compliance requirements.
+            Have your current packaging size, product type, and approximate monthly quantity ready. We will guide you from there.
           </p>
           <a href="tel:+6512345678" className="block rounded-full bg-green-600 px-7 py-4 text-center text-sm font-bold text-white shadow-lg shadow-green-600/20 transition-all hover:-translate-y-0.5 hover:bg-green-500">
             Call +65 1234 5678

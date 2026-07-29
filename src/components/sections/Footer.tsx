@@ -6,29 +6,76 @@ interface FooterProps {
 }
 
 export function Footer({ logoSrc, links }: FooterProps) {
+  const productLinks = ['Bio Carry Bags', 'Eco Cups & Lids', 'Mailer Packaging', 'Food Containers']
+
   return (
-    <footer className="bg-green-950 px-6 py-10 sm:py-12 lg:px-10">
-      <div className="mx-auto max-w-7xl border-t border-green-900 pt-8 sm:pt-10">
-        <Reveal className="mb-8 flex items-center gap-3 sm:mb-10" y={16}>
-          <img src={logoSrc} alt="PaxPacks" className="h-8 w-8 rounded-full object-cover" />
-          <span className="font-bold text-white">PaxPacks</span>
-          <span className="text-xs text-green-700">Packaging Solutions</span>
+    <footer className="bg-green-950 px-6 py-10 sm:py-14 lg:px-10">
+      <div className="mx-auto max-w-7xl">
+        <Reveal className="border-b border-green-900 pb-8" y={16}>
+          <div className="flex items-center gap-3">
+            <img src={logoSrc} alt="PaxPacks" className="h-9 w-9 rounded-full object-cover" />
+            <div>
+              <span className="block font-bold text-white">PaxPacks</span>
+              <span className="text-xs text-green-500">Bio packaging supply</span>
+            </div>
+          </div>
+          <p className="mt-5 max-w-xl text-sm leading-7 text-green-100/70">
+            Biodegradable bags, cups, mailers, and takeaway containers for businesses replacing everyday plastic packaging.
+          </p>
         </Reveal>
 
-        <Reveal className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between" delay={0.08} y={16}>
-          <p className="max-w-sm text-xs font-semibold leading-6 text-green-700 sm:max-w-none sm:uppercase sm:tracking-[0.3em]">
+        <Reveal className="grid gap-8 border-b border-green-900 py-8 sm:grid-cols-2 lg:grid-cols-4" delay={0.08} y={16}>
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-widest text-green-500">Products</p>
+            <nav className="grid gap-3">
+              {productLinks.map((label) => (
+                <a key={label} href="#products" className="text-sm text-green-100/70 transition-colors hover:text-green-300">
+                  {label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-widest text-green-500">Company</p>
+            <nav className="grid gap-3">
+              {links.map(({ label, href }) => (
+                <a key={label} href={href} className="text-sm text-green-100/70 transition-colors hover:text-green-300">
+                  {label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-widest text-green-500">Contact</p>
+            <div className="grid gap-3 text-sm text-green-100/70">
+              <a href="tel:+6512345678" className="transition-colors hover:text-green-300">+65 1234 5678</a>
+              <a href="mailto:hello@paxpacks.com" className="transition-colors hover:text-green-300">hello@paxpacks.com</a>
+              <span>Singapore HQ</span>
+            </div>
+          </div>
+
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-widest text-green-500">Ready to switch?</p>
+            <a href="tel:+6512345678" className="block rounded-full bg-green-500 px-5 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-green-400">
+              Call for Pricing
+            </a>
+          </div>
+        </Reveal>
+
+        <Reveal className="flex flex-col gap-5 pt-8 sm:flex-row sm:items-center sm:justify-between" delay={0.12} y={16}>
+          <p className="max-w-sm text-xs font-medium leading-6 text-green-700">
             © 2026 PaxPacks. All rights reserved. | Website by{' '}
             <a href="https://www.vish.studio" target="_blank" rel="noopener" className="text-green-400 transition-colors hover:text-green-300">
               Vish Studio
             </a>
           </p>
 
-          <nav className="grid grid-cols-2 gap-x-8 gap-y-4 text-xs font-semibold uppercase tracking-[0.22em] sm:flex sm:flex-wrap sm:gap-x-10 sm:tracking-[0.3em]">
-            {links.map(({ label, href }) => (
-              <a key={label} href={href} className="text-green-700 transition-colors hover:text-green-400">
-                {label}
-              </a>
-            ))}
+          <nav className="flex flex-wrap gap-x-5 gap-y-3 text-xs font-semibold text-green-700">
+            <a href="#products" className="transition-colors hover:text-green-400">Products</a>
+            <a href="#contact" className="transition-colors hover:text-green-400">Contact</a>
+            <a href="https://www.vish.studio" target="_blank" rel="noopener" className="transition-colors hover:text-green-400">Credits</a>
           </nav>
         </Reveal>
       </div>
