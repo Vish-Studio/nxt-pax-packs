@@ -1,0 +1,9 @@
+export { NavBar } from "./sections/NavBar";
+export { HeroSection } from "./sections/HeroSection";
+export { ClientsStrip } from "./sections/ClientsStrip";
+export { ProductsSection } from "./sections/ProductsSection";
+export { AboutSection } from "./sections/AboutSection";
+export { ImpactSection } from "./sections/ImpactSection";
+export { TestimonialsSection } from "./sections/TestimonialsSection";
+export { ContactSection } from "./sections/ContactSection";
+export { Footer } from "./sections/Footer";
