@@ -18,7 +18,7 @@ export function NavBar({ scrolled, menuOpen, onMenuToggle, onMenuClose, logoSrc,
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled && !menuOpen ? 'bg-white shadow-[0_1px_0_0_#e5e7eb]' : 'bg-transparent'}`}>
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 h-18 flex items-center justify-between" style={{ height: 72 }}>
         <a href="#" className="flex items-center gap-3 group">
-          <img src={logoSrc} alt="PaxPacks" className="h-9 w-9 rounded-full object-cover" />
+          <img src={logoSrc} alt="PaxPacks" className="h-9 w-9 rounded-full object-cover" loading="eager" decoding="async" />
           <span className={`font-bold text-lg tracking-tight transition-colors ${brandClasses}`}>PaxPacks</span>
         </a>
 

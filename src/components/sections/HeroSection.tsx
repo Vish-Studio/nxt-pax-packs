@@ -19,13 +19,14 @@ export function HeroSection({ heroImage }: HeroSectionProps) {
         alt="Biodegradable packaging products arranged in natural light"
         className="absolute inset-0 -z-20 overflow-hidden"
         speed={44}
+        loading="eager"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-green-950 via-green-950/80 to-green-950/25" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-green-950 via-green-950/70 to-transparent" />
 
-      <div className="mx-auto flex max-w-7xl flex-col justify-end px-6 pb-8 pt-28 sm:px-8 sm:pt-32 lg:h-full lg:px-10 lg:pb-10 lg:pt-28 xl:pt-32">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-end">
-          <Reveal className="max-w-3xl" y={20}>
+      <div className="mx-auto flex max-w-7xl flex-col justify-center px-6 pb-10 pt-28 sm:px-8 sm:pt-32 lg:h-full lg:px-10 lg:pb-14 lg:pt-28">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_24rem] lg:items-center">
+          <Reveal className="max-w-2xl" y={20}>
             <div className="mb-5 flex flex-wrap items-center gap-3 text-xs font-semibold text-green-100 lg:text-sm">
               <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
               <span>Bio product sourcing</span>
@@ -33,7 +34,7 @@ export function HeroSection({ heroImage }: HeroSectionProps) {
               <span>Bulk supply for businesses</span>
             </div>
 
-            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.02] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="max-w-2xl text-4xl font-semibold leading-[1.06] text-white sm:text-5xl lg:text-5xl xl:text-6xl">
               Replace plastic packaging
               <span className="block text-green-200">without slowing business.</span>
             </h1>
@@ -52,24 +53,24 @@ export function HeroSection({ heroImage }: HeroSectionProps) {
             </div>
           </Reveal>
 
-          <Reveal className="hidden border-l border-white/20 pl-5 text-green-50/85 sm:block lg:pl-7" delay={0.12} y={20}>
+          <Reveal className="border-y border-white/20 py-6 text-green-50/85 lg:border-l lg:border-y-0 lg:py-0 lg:pl-7" delay={0.12} y={20}>
             <p className="text-sm font-semibold text-green-200">What we do</p>
             <p className="mt-3 text-sm leading-7">
               We help shops, restaurants, distributors, and ecommerce teams source practical bio alternatives to everyday plastic packaging.
             </p>
+
+            <div className="mt-6 grid gap-3">
+              {proofPoints.map((item, index) => (
+                <Reveal key={item.label} className="border-t border-white/15 pt-3 first:border-t-0 first:pt-0" delay={0.14 + index * 0.06} y={16}>
+                  <div className="text-2xl font-semibold text-white">{item.value}</div>
+                  <div className="mt-1 text-sm leading-5 text-green-100/75">{item.label}</div>
+                </Reveal>
+              ))}
+            </div>
           </Reveal>
         </div>
 
-        <div className="mt-7 grid grid-cols-3 border-y border-white/20 sm:mt-10 lg:mt-8">
-          {proofPoints.map((item, index) => (
-            <Reveal key={item.label} className="border-r border-white/20 px-3 py-4 first:pl-0 last:border-r-0 sm:px-6 sm:py-4 sm:first:pl-0" delay={index * 0.08} y={18}>
-              <div className="text-xl font-semibold text-white sm:text-2xl lg:text-3xl">{item.value}</div>
-              <div className="mt-1 text-xs leading-4 text-green-100/75 sm:text-sm">{item.label}</div>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal className="mt-5 flex items-center gap-3 text-sm font-medium text-green-100/80 sm:mt-6" delay={0.18} y={16}>
+        <Reveal className="mt-8 flex items-center gap-3 text-sm font-medium text-green-100/80 lg:mt-10" delay={0.18} y={16}>
           <span className="h-px w-10 bg-green-200/50" />
           <span>Plant starch, PLA, cassava, kraft, and bagasse formats</span>
         </Reveal>

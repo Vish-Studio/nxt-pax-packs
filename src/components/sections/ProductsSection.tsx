@@ -1,4 +1,5 @@
 import { Reveal } from '../reveal/Reveal'
+import { ImageWithFallback } from '../ImageWithFallback'
 
 interface Product {
   name: string
@@ -64,7 +65,12 @@ export function ProductsSection({ products, activeProduct, onSelectProduct }: Pr
 
           <Reveal className="lg:col-span-3 grid sm:grid-cols-2 gap-5" delay={0.16}>
             <div className="relative rounded-3xl overflow-hidden bg-green-100 h-64 sm:h-auto sm:row-span-2">
-              <img src={active.img} alt={active.name} className="w-full h-full object-cover transition-all duration-500" />
+              <ImageWithFallback
+                src={active.img}
+                alt={active.name}
+                fallback="https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?w=700&h=800&fit=crop&auto=format"
+                className="w-full h-full object-cover transition-all duration-500"
+              />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-950/70 to-transparent p-5">
                 <div className="text-3xl font-extrabold text-white">{active.stat}</div>
                 <div className="text-green-300 text-xs font-semibold">{active.statLabel}</div>

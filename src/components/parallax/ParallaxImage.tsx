@@ -9,9 +9,10 @@ interface ParallaxImageProps {
   imageClassName?: string
   speed?: number
   ariaHidden?: boolean
+  loading?: 'eager' | 'lazy'
 }
 
-export function ParallaxImage({ src, alt, className, imageClassName, speed = 64, ariaHidden }: ParallaxImageProps) {
+export function ParallaxImage({ src, alt, className, imageClassName, speed = 64, ariaHidden, loading = 'lazy' }: ParallaxImageProps) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,6 +27,7 @@ export function ParallaxImage({ src, alt, className, imageClassName, speed = 64,
           src={src}
           alt={alt}
           aria-hidden={ariaHidden}
+          loading={loading}
           className={`h-full w-full object-cover ${imageClassName ?? ''}`}
         />
       </motion.div>

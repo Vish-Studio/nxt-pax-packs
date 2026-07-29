@@ -1,5 +1,6 @@
 import { Reveal } from '../reveal/Reveal'
 import { ParallaxImage } from '../parallax/ParallaxImage'
+import { ImageWithFallback } from '../ImageWithFallback'
 
 interface ImpactSectionProps {
   forestImage: string
@@ -41,7 +42,7 @@ export function ImpactSection({ forestImage, stats, galleryImages }: ImpactSecti
         <div className="mt-12 grid md:grid-cols-3 gap-4">
           {galleryImages.map((url, i) => (
             <Reveal key={`${url}-${i}`} className="rounded-2xl overflow-hidden h-52 bg-green-800" delay={i * 0.08}>
-              <img src={url} alt="PaxPacks in action" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
+              <ImageWithFallback src={url} alt="PaxPacks in action" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
             </Reveal>
           ))}
         </div>

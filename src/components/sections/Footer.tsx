@@ -13,7 +13,7 @@ export function Footer({ logoSrc, links }: FooterProps) {
       <div className="mx-auto max-w-7xl">
         <Reveal className="border-b border-green-900 pb-8" y={16}>
           <div className="flex items-center gap-3">
-            <img src={logoSrc} alt="PaxPacks" className="h-9 w-9 rounded-full object-cover" />
+            <img src={logoSrc} alt="PaxPacks" className="h-9 w-9 rounded-full object-cover" loading="lazy" decoding="async" />
             <div>
               <span className="block font-bold text-white">PaxPacks</span>
               <span className="text-xs text-green-500">Bio packaging supply</span>

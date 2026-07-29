@@ -16,7 +16,7 @@ const HERO_IMG = 'https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?w
 const FOREST_IMG = 'https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?w=1400&h=900&fit=crop&auto=format'
 const LEAVES_IMG = 'https://images.unsplash.com/photo-1609710219624-201223bd6b1e?w=900&h=1100&fit=crop&auto=format'
 const PLANT_IMG = 'https://images.unsplash.com/photo-1761210980705-9f901d4182f7?w=900&h=900&fit=crop&auto=format'
-const TEAM_IMG = 'https://unsplash.com/photos/qJVfC0hgqMs/download?force=true'
+const TEAM_IMG = 'https://images.unsplash.com/photo-1512909006721-3d6018887383?w=1200&h=800&fit=crop&auto=format'
 const FACTORY_IMG = 'https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?w=1200&h=900&fit=crop&auto=format'
 
 const NAV_LINKS = [
@@ -31,7 +31,7 @@ const PRODUCTS = [
     name: 'Bio Carry Bags',
     tag: 'Plant Starch',
     desc: 'Retail and grocery carry bags that feel familiar to customers while replacing conventional single-use plastic.',
-    img: 'https://unsplash.com/photos/white-plastic-bag-on-white-table-NcAJ6N_Kn8E/download?force=true',
+    img: 'https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=700&h=800&fit=crop&auto=format',
     stat: '180 days',
     statLabel: 'to biodegrade',
   },
@@ -47,7 +47,7 @@ const PRODUCTS = [
     name: 'Mailer Packaging',
     tag: 'Cassava Based',
     desc: 'Lightweight mailers and shipping sleeves for ecommerce brands replacing plastic poly mailers.',
-    img: 'https://unsplash.com/photos/W-CN4ZWwKiY/download?force=true',
+    img: 'https://images.unsplash.com/photo-1512909006721-3d6018887383?w=700&h=800&fit=crop&auto=format',
     stat: '100%',
     statLabel: 'compostable',
   },
@@ -55,7 +55,7 @@ const PRODUCTS = [
     name: 'Food Containers',
     tag: 'Bagasse',
     desc: 'Takeaway boxes, clamshells, bowls, and trays for restaurants, caterers, cloud kitchens, and delivery teams.',
-    img: 'https://unsplash.com/photos/pxz1DfpNEs0/download?force=true',
+    img: 'https://images.unsplash.com/photo-1609710219624-201223bd6b1e?w=700&h=800&fit=crop&auto=format',
     stat: '60 days',
     statLabel: 'full breakdown',
   },
