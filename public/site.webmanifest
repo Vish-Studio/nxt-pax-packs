@@ -4,7 +4,7 @@
   "description": "Biodegradable bags, cups, mailers, and takeaway containers for businesses replacing everyday plastic packaging.",
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "logo.png",
       "sizes": "1170x1155",
       "type": "image/png"
     }

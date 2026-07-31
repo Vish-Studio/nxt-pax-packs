@@ -8,7 +8,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://paxpacks.github.io'),
+  metadataBase: new URL('https://vish-studio.github.io/nxt-pax-packs'),
   title: {
     default: 'PaxPacks | Bio Packaging Products for Businesses',
     template: '%s | PaxPacks',
@@ -32,15 +32,15 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: '/nxt-pax-packs/logo.png',
+    shortcut: '/nxt-pax-packs/logo.png',
+    apple: '/nxt-pax-packs/logo.png',
   },
-  manifest: '/site.webmanifest',
+  manifest: '/nxt-pax-packs/site.webmanifest',
   openGraph: {
     title: 'PaxPacks | Bio Packaging Products for Businesses',
     description: 'Biodegradable bags, cups, mailers, and takeaway containers for retail, food service, ecommerce, and delivery teams.',
-    url: 'https://paxpacks.github.io',
+    url: 'https://vish-studio.github.io/nxt-pax-packs',
     siteName: 'PaxPacks',
     type: 'website',
     locale: 'en_US',

@@ -1,23 +1,28 @@
-# figma-make-app
+# pax-pack-website
 
-React + Vite + Tailwind CSS project running inside Figma Make.
+Next.js 15 App Router static site for PaxPacks.
 
 ## Development Server
 
-A Vite development server is **always running** on `$PORT` (default 8443). You don't need to start it manually.
+Run the local Next development server with:
 
-- Preview URL: The user can access the running app through the preview panel
-- Hot reload: Changes to source files are reflected immediately
+```bash
+npm run dev
+```
 
 ## Key Files
 
-- `src/App.tsx` - Main application component
-- `src/main.tsx` - React entry point
-- `src/index.css` - Global styles and Tailwind CSS import
+- `app/page.tsx` - App Router homepage route
+- `app/not-found.tsx` - App Router 404 route
+- `app/layout.tsx` - Root layout, Poppins font, and SEO metadata
+- `app/globals.css` - Global styles and Tailwind CSS import
+- `components/` - Kebab-case component folders and files
+- `lib/site-content.ts` - Shared page content and image URLs
+- `lib/site-assets.ts` - Static asset path helpers for GitHub Pages
 - `package.json` - Dependencies and scripts
-- `vite.config.ts` - Vite configuration
-- `.mise.toml` - Toolchain versions (Node.js, pnpm)
+- `next.config.mjs` - Next static export and GitHub Pages base path
+- `.github/workflows/deploy-gh-pages.yml` - GitHub Pages deployment workflow
 
 ## Styling
 
-This project uses **Tailwind CSS v4** for styling. Use Tailwind utility classes directly in JSX. Tailwind is loaded via the Vite plugin — no PostCSS config needed.
+This project uses **Tailwind CSS v4** for styling. Use Tailwind utility classes directly in JSX.

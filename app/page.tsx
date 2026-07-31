@@ -1,7 +1,5 @@
-'use client'
-
-import App from '../src/App'
+import { HomePage } from '@/components/home-page/home-page'
 
 export default function Page() {
-  return <App />
+  return <HomePage />
 }
