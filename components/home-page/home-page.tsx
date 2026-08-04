@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { AboutSection } from '@/components/about-section/about-section'
+import { AppreciationSection } from '@/components/appreciation-section/appreciation-section'
 import { ClientsStrip } from '@/components/clients-strip/clients-strip'
 import { ContactSection } from '@/components/contact-section/contact-section'
 import { Footer } from '@/components/footer/footer'
@@ -54,11 +55,12 @@ export function HomePage() {
       <ClientsStrip clients={CLIENTS} />
       <ProductsSection products={PRODUCTS} activeProduct={activeProduct} onSelectProduct={setActiveProduct} />
       <AboutSection factoryImage={FACTORY_IMAGE} />
+      <AppreciationSection />
       <ImpactSection forestImage={FOREST_IMAGE} stats={STATS} galleryImages={[LEAVES_IMAGE, PLANT_IMAGE, TEAM_IMAGE]} />
       <TestimonialsSection testimonials={TESTIMONIALS} />
+      <AppreciationSection />
       <ContactSection leavesImage={LEAVES_IMAGE} />
       <Footer logoSrc={logoSrc} links={NAV_LINKS} />
     </div>
   )
 }
-
