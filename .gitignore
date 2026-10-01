@@ -2,3 +2,4 @@
 /.next
 /out
 /.env
+/.env.local
