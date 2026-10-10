@@ -11,6 +11,7 @@ import { ImpactSection } from '@/components/impact-section/impact-section'
 import { NavBar } from '@/components/nav-bar/nav-bar'
 import { ProductsSection } from '@/components/products-section/products-section'
 import { TestimonialsSection } from '@/components/testimonials-section/testimonials-section'
+import { trackEvent } from '@/lib/analytics'
 import { assetPath } from '@/lib/site-assets'
 import {
   CLIENTS,
@@ -31,6 +32,11 @@ export function HomePage() {
   const [scrolled, setScrolled] = useState(false)
   const [activeProduct, setActiveProduct] = useState(0)
   const logoSrc = assetPath('/logo.png')
+
+  const handleSelectProduct = (index: number) => {
+    setActiveProduct(index)
+    trackEvent('product_select', { product_name: PRODUCTS[index].name })
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -53,7 +59,7 @@ export function HomePage() {
 
       <HeroSection heroImages={HERO_IMAGES} />
       <ClientsStrip clients={CLIENTS} />
-      <ProductsSection products={PRODUCTS} activeProduct={activeProduct} onSelectProduct={setActiveProduct} />
+      <ProductsSection products={PRODUCTS} activeProduct={activeProduct} onSelectProduct={handleSelectProduct} />
       <AboutSection factoryImage={FACTORY_IMAGE} />
       <AppreciationSection />
       <ImpactSection forestImage={FOREST_IMAGE} stats={STATS} galleryImages={[LEAVES_IMAGE, PLANT_IMAGE, TEAM_IMAGE]} />

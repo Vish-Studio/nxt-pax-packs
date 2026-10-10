@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { Analytics } from '@/components/analytics/analytics'
+import { CookieConsent } from '@/components/cookie-consent/cookie-consent'
 import './globals.css'
 
 const poppins = Poppins({
@@ -55,7 +57,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        {children}
+        <CookieConsent />
+        <Analytics />
+      </body>
     </html>
   )
 }
