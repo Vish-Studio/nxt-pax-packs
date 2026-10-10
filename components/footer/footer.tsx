@@ -1,3 +1,4 @@
+import { openCookieSettings } from '@/lib/cookie-consent'
 import { Reveal } from '@/components/reveal/reveal'
 
 interface FooterProps {
@@ -76,6 +77,7 @@ export function Footer({ logoSrc, links }: FooterProps) {
             <a href="#products" className="transition-colors hover:text-green-400">Products</a>
             <a href="#contact" className="transition-colors hover:text-green-400">Contact</a>
             <a href="https://www.vish.studio" target="_blank" rel="noopener" className="transition-colors hover:text-green-400">Credits</a>
+            <button type="button" onClick={openCookieSettings} className="cursor-pointer transition-colors hover:text-green-400">Cookie settings</button>
           </nav>
         </Reveal>
       </div>
